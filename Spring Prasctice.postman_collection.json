@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "930d0734-6d40-40bd-b340-3385ccb81471",
+		"name": "Spring Prasctice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24649607"
+	},
+	"item": [
+		{
+			"name": "Application Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spring_url}}{{health}}",
+					"host": [
+						"{{spring_url}}{{health}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Application Shutdown",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{spring_url}}{{shutdown}}",
+					"host": [
+						"{{spring_url}}{{shutdown}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Application check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{spring_url}}",
+					"host": [
+						"{{spring_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Greeting",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "spring_url",
+			"value": "localhost:8090/",
+			"type": "string"
+		},
+		{
+			"key": "health",
+			"value": "actuator/health",
+			"type": "string"
+		},
+		{
+			"key": "shutdown",
+			"value": "actuator/shutdown",
+			"type": "string"
+		}
+	]
+}
